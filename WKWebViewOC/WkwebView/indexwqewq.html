@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+    <head>
+        <title>测试IOS与JS之前的互调</title>
+        <style type="text/css">
+            * {
+                font-size: 40px;
+            }
+        </style>
+        <script type="text/javascript">
+            function Promot(message){
+                alert(message);
+            }
+        </script>
+    </head>
+    <body>
+        <div style="margin-top: 100px">
+            <h1>测试OCJS</h1>
+            <input type="button" value="调用原生SDK登录" onclick="OCSDKLoad()">
+                  <br>
+                  <br>
+                  <br>
+            <input type="button" value="调用原生SDK退出" onclick="OCSDKexit()">
+                <br>
+                <br>
+                <br>
+            <input type="button" value="调用原生SDK切换" onclick="OCSDKswitch()">
+                
+                <br>
+                <br>
+                <br>
+            <input type="button" value="调用原生支付" onclick="OCSDKpurchase()">
+                <br>
+                <br>
+                <br>
+            <input type="button" value="nsstring传值" onclick="showAlertMsg('js title', 'js message')">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div>
+    <input type="button" value="map字典传值" onclick="callWithDict({'name': 'testname', 'age': 10, 'height': 170})">
+        <br>
+        <br>
+        <br>
+<!--    <input type="button" value="Call ObjC func with JSON and ObjC call js func to pass args." onclick="jsCallObjcAndObjcCallJsWithDict({'name': 'testname', 'age': 10, 'height': 170})">-->
+        </div>
+
+<!--        <div>-->
+<!--            <span id="jsParamFuncSpan" style="color: red; font-size: 50px;"></span>-->
+<!--        </div>-->
+    </body>
+</html>
